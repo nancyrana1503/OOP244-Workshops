@@ -1,0 +1,180 @@
+Canister.cpp:51:24: error: definition of implicitly-declared ‘seneca::Canister::Canister()’
+     Canister::Canister() {
+                        ^
+Canister.cpp:62:5: error: prototype for ‘seneca::Canister::Canister(const char*)’ does not match any in class ‘seneca::Canister’
+     Canister::Canister(const char* contentName) {
+     ^
+In file included from Canister.cpp:4:0:
+Canister.h:5:11: error: candidates are: constexpr seneca::Canister::Canister(seneca::Canister&&)
+     class Canister {
+           ^
+Canister.h:5:11: error:                 constexpr seneca::Canister::Canister(const seneca::Canister&)
+Canister.h:5:11: error:                 seneca::Canister::Canister()
+Canister.cpp:76:5: error: prototype for ‘seneca::Canister::Canister(double, double, const char*)’ does not match any in class ‘seneca::Canister’
+     Canister::Canister(double height, double diameter, const char* contentName) 
+     ^
+In file included from Canister.cpp:4:0:
+Canister.h:5:11: error: candidates are: constexpr seneca::Canister::Canister(seneca::Canister&&)
+     class Canister {
+           ^
+Canister.h:5:11: error:                 constexpr seneca::Canister::Canister(const seneca::Canister&)
+Canister.h:5:11: error:                 seneca::Canister::Canister()
+Canister.cpp:93:25: error: definition of implicitly-declared ‘seneca::Canister::~Canister()’
+     Canister::~Canister() 
+                         ^
+Canister.cpp:99:31: error: no ‘seneca::Canister& seneca::Canister::clear()’ member function declared in class ‘seneca::Canister’
+     Canister& Canister::clear() 
+                               ^
+Canister.cpp:107:59: error: no ‘seneca::Canister& seneca::Canister::setContent(const char*)’ member function declared in class ‘seneca::Canister’
+     Canister& Canister::setContent(const char* contentName) 
+                                                           ^
+Canister.cpp:120:45: error: no ‘seneca::Canister& seneca::Canister::pour(double)’ member function declared in class ‘seneca::Canister’
+     Canister& Canister::pour(double quantity) 
+                                             ^
+Canister.cpp:132:43: error: no ‘seneca::Canister& seneca::Canister::pour(seneca::Canister&)’ member function declared in class ‘seneca::Canister’
+     Canister& Canister::pour(Canister& can) 
+                                           ^
+main_prof.cpp: In function ‘int main()’:
+main_prof.cpp:24:35: error: no matching function for call to ‘seneca::Canister::Canister(int, int, const char [10])’
+       Canister(20, 10, "Olive Oil"),
+                                   ^
+main_prof.cpp:24:35: note: candidates are:
+In file included from main_prof.cpp:17:0:
+Canister.h:5:11: note: seneca::Canister::Canister()
+     class Canister {
+           ^
+Canister.h:5:11: note:   candidate expects 0 arguments, 3 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(const seneca::Canister&)
+Canister.h:5:11: note:   candidate expects 1 argument, 3 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(seneca::Canister&&)
+Canister.h:5:11: note:   candidate expects 1 argument, 3 provided
+main_prof.cpp:25:30: error: no matching function for call to ‘seneca::Canister::Canister(const char [13])’
+       Canister("Orange Juice"),
+                              ^
+main_prof.cpp:25:30: note: candidates are:
+In file included from main_prof.cpp:17:0:
+Canister.h:5:11: note: seneca::Canister::Canister()
+     class Canister {
+           ^
+Canister.h:5:11: note:   candidate expects 0 arguments, 1 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(const seneca::Canister&)
+Canister.h:5:11: note:   no known conversion for argument 1 from ‘const char [13]’ to ‘const seneca::Canister&’
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(seneca::Canister&&)
+Canister.h:5:11: note:   no known conversion for argument 1 from ‘const char [13]’ to ‘seneca::Canister&&’
+main_prof.cpp:26:21: error: no matching function for call to ‘seneca::Canister::Canister(int, int)’
+       Canister(40,30),
+                     ^
+main_prof.cpp:26:21: note: candidates are:
+In file included from main_prof.cpp:17:0:
+Canister.h:5:11: note: seneca::Canister::Canister()
+     class Canister {
+           ^
+Canister.h:5:11: note:   candidate expects 0 arguments, 2 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(const seneca::Canister&)
+Canister.h:5:11: note:   candidate expects 1 argument, 2 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(seneca::Canister&&)
+Canister.h:5:11: note:   candidate expects 1 argument, 2 provided
+main_prof.cpp:29:23: error: no matching function for call to ‘seneca::Canister::Canister(std::nullptr_t)’
+       Canister(nullptr),
+                       ^
+main_prof.cpp:29:23: note: candidates are:
+In file included from main_prof.cpp:17:0:
+Canister.h:5:11: note: seneca::Canister::Canister()
+     class Canister {
+           ^
+Canister.h:5:11: note:   candidate expects 0 arguments, 1 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(const seneca::Canister&)
+Canister.h:5:11: note:   no known conversion for argument 1 from ‘std::nullptr_t’ to ‘const seneca::Canister&’
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(seneca::Canister&&)
+Canister.h:5:11: note:   no known conversion for argument 1 from ‘std::nullptr_t’ to ‘seneca::Canister&&’
+main_prof.cpp:30:31: error: no matching function for call to ‘seneca::Canister::Canister(int, int, const char [8])’
+       Canister(9,20, "Bad one"),
+                               ^
+main_prof.cpp:30:31: note: candidates are:
+In file included from main_prof.cpp:17:0:
+Canister.h:5:11: note: seneca::Canister::Canister()
+     class Canister {
+           ^
+Canister.h:5:11: note:   candidate expects 0 arguments, 3 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(const seneca::Canister&)
+Canister.h:5:11: note:   candidate expects 1 argument, 3 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(seneca::Canister&&)
+Canister.h:5:11: note:   candidate expects 1 argument, 3 provided
+main_prof.cpp:31:31: error: no matching function for call to ‘seneca::Canister::Canister(int, int, const char [8])’
+       Canister(20,9, "Bad one"),
+                               ^
+main_prof.cpp:31:31: note: candidates are:
+In file included from main_prof.cpp:17:0:
+Canister.h:5:11: note: seneca::Canister::Canister()
+     class Canister {
+           ^
+Canister.h:5:11: note:   candidate expects 0 arguments, 3 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(const seneca::Canister&)
+Canister.h:5:11: note:   candidate expects 1 argument, 3 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(seneca::Canister&&)
+Canister.h:5:11: note:   candidate expects 1 argument, 3 provided
+main_prof.cpp:32:32: error: no matching function for call to ‘seneca::Canister::Canister(int, int, const char [8])’
+       Canister(41,20, "Bad one"),
+                                ^
+main_prof.cpp:32:32: note: candidates are:
+In file included from main_prof.cpp:17:0:
+Canister.h:5:11: note: seneca::Canister::Canister()
+     class Canister {
+           ^
+Canister.h:5:11: note:   candidate expects 0 arguments, 3 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(const seneca::Canister&)
+Canister.h:5:11: note:   candidate expects 1 argument, 3 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(seneca::Canister&&)
+Canister.h:5:11: note:   candidate expects 1 argument, 3 provided
+main_prof.cpp:33:32: error: no matching function for call to ‘seneca::Canister::Canister(int, int, const char [8])’
+       Canister(20,31, "Bad one")
+                                ^
+main_prof.cpp:33:32: note: candidates are:
+In file included from main_prof.cpp:17:0:
+Canister.h:5:11: note: seneca::Canister::Canister()
+     class Canister {
+           ^
+Canister.h:5:11: note:   candidate expects 0 arguments, 3 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(const seneca::Canister&)
+Canister.h:5:11: note:   candidate expects 1 argument, 3 provided
+Canister.h:5:11: note: constexpr seneca::Canister::Canister(seneca::Canister&&)
+Canister.h:5:11: note:   candidate expects 1 argument, 3 provided
+main_prof.cpp:36:33: error: ‘class seneca::Canister’ has no member named ‘clear’
+    for (i = 0; i < 9; i++) C[i].clear();
+                                 ^
+main_prof.cpp:38:9: error: ‘class seneca::Canister’ has no member named ‘setContent’
+    C[0].setContent("Milk").pour(1200);
+         ^
+main_prof.cpp:39:9: error: ‘class seneca::Canister’ has no member named ‘setContent’
+    C[1].setContent("Milk").pour(100);
+         ^
+main_prof.cpp:40:9: error: ‘class seneca::Canister’ has no member named ‘setContent’
+    C[2].setContent("Olive Oil").pour(20000);
+         ^
+main_prof.cpp:41:9: error: ‘class seneca::Canister’ has no member named ‘setContent’
+    C[3].setContent("Orange Juice").pour(500);
+         ^
+main_prof.cpp:42:9: error: ‘class seneca::Canister’ has no member named ‘setContent’
+    C[5].setContent("Apple Juice");
+         ^
+main_prof.cpp:44:57: error: ‘class seneca::Canister’ has no member named ‘pour’
+    showCans("Emptied Milk canister into another", &C[0].pour(C[1]), 2);
+                                                         ^
+main_prof.cpp:45:9: error: ‘class seneca::Canister’ has no member named ‘pour’
+    C[4].pour(C[3]);
+         ^
+main_prof.cpp:47:9: error: ‘class seneca::Canister’ has no member named ‘pour’
+    C[3].pour(C[2]);
+         ^
+main_prof.cpp:49:65: error: ‘class seneca::Canister’ has no member named ‘pour’
+    showCans("Poured 5000ccs into the Olive Oil canister", &C[2].pour(5000), 1);
+                                                                 ^
+main_prof.cpp:50:56: error: ‘class seneca::Canister’ has no member named ‘pour’
+    showCans("Filled can of milk with olive oil", &C[1].pour(C[2]), 2);
+                                                        ^
+main_prof.cpp:51:65: error: ‘class seneca::Canister’ has no member named ‘pour’
+    showCans("Poured too much into Orange Juice canister", &C[4].pour(1500), 1);
+                                                                 ^
+main_prof.cpp:52:79: error: ‘class seneca::Canister’ has no member named ‘clear’
+    showCans("Filled the Apple Juice can with Olive Oil after cleaning", &C[5].clear().pour(C[2]), 1);
+                                                                               ^
